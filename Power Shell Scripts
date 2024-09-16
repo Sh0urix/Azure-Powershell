@@ -6,6 +6,8 @@ New-AzureADUser -DisplayName "Test2" -PasswordProfile (New-Object -TypeName Micr
 New-AzureADUser -DisplayName "Test3" -PasswordProfile (New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile -Property @{Password = "StrongPassword123"; ForceChangePasswordNextLogin = $true}) -UserPrincipalName "test3@philzlabsoutlook.onmicrosoft.com" -AccountEnabled $true -MailNickname "test3"
 New-AzureADUser -DisplayName "Test4" -PasswordProfile (New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile -Property @{Password = "StrongPassword123"; ForceChangePasswordNextLogin = $true}) -UserPrincipalName "test4@philzlabsoutlook.onmicrosoft.com" -AccountEnabled $true -MailNickname "test4"
 
+All variables in "" can be edited for specific user values necessary
+
 #Adding a new Group / Groups to Entra ID:
 
 Connect-AzureAD
