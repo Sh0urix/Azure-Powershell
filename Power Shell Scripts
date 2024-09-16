@@ -12,3 +12,17 @@ All variables in "" can be edited for specific user values necessary
 
 Connect-AzureAD
 New-AzureADGroup -DisplayName "Group Name" -MailEnabled $false -SecurityEnabled $true -MailNickName "groupname"
+
+
+#Creating a network security group:
+
+Install-Module -Name Az -AllowClobber -Force
+
+Connect-AzAccount
+# Variables
+$resourceGroupName = "MyResourceGroup"
+$location = "EastUS"
+$nsgName = "MyNetworkSecurityGroup"
+
+# Create the Network Security Group
+$nsg = New-AzNetworkSecurityGroup -ResourceGroupName $resourceGroupName -Location $location -Name $nsgName
