@@ -1,0 +1,12 @@
+#Adding a new User/ Users to Entra ID:
+
+Connect-AzureAD
+New-AzureADUser -DisplayName "Test1" -PasswordProfile (New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile -Property @{Password = "StrongPassword123"; ForceChangePasswordNextLogin = $true}) -UserPrincipalName "test1@philzlabsoutlook.onmicrosoft.com" -AccountEnabled $true -MailNickname "test1"
+New-AzureADUser -DisplayName "Test2" -PasswordProfile (New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile -Property @{Password = "StrongPassword123"; ForceChangePasswordNextLogin = $true}) -UserPrincipalName "test2@philzlabsoutlook.onmicrosoft.com" -AccountEnabled $true -MailNickname "test2"
+New-AzureADUser -DisplayName "Test3" -PasswordProfile (New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile -Property @{Password = "StrongPassword123"; ForceChangePasswordNextLogin = $true}) -UserPrincipalName "test3@philzlabsoutlook.onmicrosoft.com" -AccountEnabled $true -MailNickname "test3"
+New-AzureADUser -DisplayName "Test4" -PasswordProfile (New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile -Property @{Password = "StrongPassword123"; ForceChangePasswordNextLogin = $true}) -UserPrincipalName "test4@philzlabsoutlook.onmicrosoft.com" -AccountEnabled $true -MailNickname "test4"
+
+#Adding a new Group / Groups to Entra ID:
+
+Connect-AzureAD
+New-AzureADGroup -DisplayName "Group Name" -MailEnabled $false -SecurityEnabled $true -MailNickName "groupname"
