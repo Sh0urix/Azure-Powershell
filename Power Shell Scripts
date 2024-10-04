@@ -13,6 +13,10 @@ All variables in "" can be edited for specific user values necessary
 Connect-AzureAD
 New-AzureADGroup -DisplayName "Group Name" -MailEnabled $false -SecurityEnabled $true -MailNickName "groupname"
 
+#Creating a Resource Group
+Connect-AzAccount
+
+New-AzResourceGroup -Name "<ResourceGroupName>" -Location "<AzureRegion>"
 
 #Creating a network security group:
 
