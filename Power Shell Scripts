@@ -30,3 +30,8 @@ $nsgName = "MyNetworkSecurityGroup"
 
 # Create the Network Security Group
 $nsg = New-AzNetworkSecurityGroup -ResourceGroupName $resourceGroupName -Location $location -Name $nsgName
+
+#Create a VM
+
+Connect-AzAccount
+New-AzVM -ResourceGroupName MyNewTestGroup -Name "$mynewtestvm" -SubnetName $default -SecurityGroupName $MyNetworkSecurityGroup -PublicIpAddressName $newpbip23 -OpenPorts $80,3389
